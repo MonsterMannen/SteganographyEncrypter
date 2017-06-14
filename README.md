@@ -1,2 +1,3 @@
 # SteganographyEncrypter
-hide text in image
+
+Testing stuff
