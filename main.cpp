@@ -13,6 +13,7 @@ int changeLastChar(int, int);
 
 int main(int argc, char** argv) {
 	// ***args***
+	/*
 	bool encrypt = false;	// debug
 
 	if (encrypt) {
@@ -29,6 +30,7 @@ int main(int argc, char** argv) {
 		argc = 2;
 		argv[1] = "e_img1.png";
 	}
+	*/
 	// **********
 
 	// check arguments
@@ -70,12 +72,12 @@ int main(int argc, char** argv) {
 		clock_t begin = clock();
 		image = writeTextToImage(image, message);
 		double encryptTime = double(clock() - begin);
-		string newImageName = "e_" + imageName;			// maybe change this later
+		string newImageName = imageName;	//"e_" + imageName;			// maybe change this later
 		saveImage(image, newImageName);
 		cout << "\nEncrypted message (" << encryptTime << "ms) to " << newImageName << "\n";
 	}
 
-	imshow("Modified", image);	// debug
+	//imshow("Modified", image);	// debug
 	waitKey();
 
 	return 0;
@@ -93,7 +95,6 @@ Mat writeTextToImage(Mat image, string message) {
 
 	// write text to pixels by changing the last decimal in every RGB value
 	int ascii;
-	int digit;
 	int row;
 	int col;
 	int count = 3;	// skip 3 first pixels
