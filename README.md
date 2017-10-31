@@ -20,3 +20,6 @@ Decrypt
 ImgEncrypter.exe imageName.png
 ```
 
+### Note
+
+I don't think this will work, C++ hard. Maybe works if OpenCV is installed and in your path.
